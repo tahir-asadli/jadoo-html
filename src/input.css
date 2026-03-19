@@ -17,19 +17,18 @@
   --text-6xl: 84px;
 
   /* Brand Colors  */
-  --color-brand-orange: #DF6951;
-  --color-brand-yellow: #F1A501;
-  --color-brand-dark-blue: #14183E;
-  --color-brand-light-blue: #5E6282;
-  --color-brand-gray: #686D77;
-  --color-brand-purple: #6246E5;
-  --color-brand-light-yellow: #FFF1DA;
+  --color-brand-orange: #df6951;
+  --color-brand-yellow: #f1a501;
+  --color-brand-dark-blue: #14183e;
+  --color-brand-light-blue: #5e6282;
+  --color-brand-gray: #686d77;
+  --color-brand-light-gray: #e5e5e5;
+  --color-brand-purple: #6246e5;
+  --color-brand-light-yellow: #fff1da;
   --color-brand-teal: #006380;
-  --color-brand-light-purple: #DFD7F9;
+  --color-brand-light-purple: #dfd7f9;
   --color-brand-dark-gray: #212832;
-
 }
-
 
 @layer base {
   :root {
@@ -43,12 +42,12 @@
     font-family: var(--font-sans);
     color: var(--color-brand-light-blue);
   }
-  
+
   html.mobile-menu-open,
   html.mobile-menu-open body {
     @apply overflow-hidden h-full;
   }
-  
+
   h1,
   .h1 {
     font-family: var(--font-serif);
@@ -126,7 +125,6 @@
   .text-input {
     @apply bg-gray-100 rounded-full px-4 py-2 h-12 w-full;
   }
-
 }
 @layer utilities {
   .container {
@@ -160,5 +158,4 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
-
 }
