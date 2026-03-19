@@ -158,4 +158,31 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+  .footer-social {
+  }
+
+  /* Footer Links */
+  .footer-links h3 {
+    @apply text-brand-dark-gray text-xl mb-6;
+  }
+  .footer-links ul {
+    @apply flex flex-col gap-3;
+  }
+  .footer-links ul li {
+  }
+  .footer-links ul li a {
+    @apply text-lg;
+  }
+  /* Footer Social */
+  .footer-social ul {
+    @apply flex gap-6;
+  }
+  .footer-social ul a {
+  }
+  .footer-social ul a span {
+    @apply inline-flex justify-center items-center size-10 shadow rounded-full bg-white  text-brand-dark-blue transition hover:bg-brand-orange hover:text-white;
+  }
+  .footer-social ul a span svg {
+    @apply inline-flex size-4;
+  }
 }
