@@ -123,7 +123,7 @@
     @apply absolute inset-0 top-3 size-full blur-lg bg-brand-yellow opacity-20 transition-opacity duration-300 rounded-[10px] -z-1;
   }
   .text-input {
-    @apply bg-gray-100 rounded-full px-4 py-2 h-12 w-full;
+    @apply bg-white rounded-[10px] py-5.25 px-6.25 pl-15 w-full;
   }
 }
 @layer utilities {
@@ -159,6 +159,21 @@
     display: none;
   }
   .footer-social {
+  }
+
+  /* Newsletter */
+  .newsletter {
+    @apply max-w-157.5 mx-auto;
+  }
+  .newsletter form {
+    @apply flex gap-6;
+  }
+  .newsletter input[type='text'] {
+    @apply bg-white rounded-[10px] py-5.25 px-6.25 pl-15 w-full;
+  }
+  .newsletter button,
+  .newsletter input[type='submit'] {
+    @apply bg-white rounded-[10px] py-5.5 px-12 shrink-0 max-w-45 flex justify-center items-center text-center text-white bg-linear-to-b from-[#FF946D] to-[#FF7D68];
   }
 
   /* Footer Links */
