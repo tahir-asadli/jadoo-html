@@ -23,7 +23,7 @@
       <div>
         <a href="/"><img src="assets/Logo.svg" alt="Logo"></a>
       </div>
-      <div class="flex items-center gap-4 [&_a]:inline-flex [&_a]:py-2.5 [&_a]:px-5 [&_a]:text-brand-dark-gray [&_a]:transition-all [&_a]:hover:text-brand-orange">
+      <div class="hidden md:flex items-center gap-4 [&_a]:inline-flex [&_a]:py-2.5 [&_a]:px-5 [&_a]:text-brand-dark-gray [&_a]:transition-all [&_a]:hover:text-brand-orange">
         <ul class="flex gap-2">
           <li><a href="/">Desitnations</a></li>
           <li><a href="/">Hotels</a></li>
@@ -49,33 +49,33 @@
     </div>
   </header>
   <!-- Hero -->
-  <section class="mb-40">
+  <section class="mb-16 md:mb-40">
     <!-- <img src="assets/decore.svg" alt="Hero Image" class="absolute h-full w-6/12 scale-120 top-0 right-0 object-contain pointer-events-none object-top-left"> -->
     <div class="container">
-      <div class="grid grid-cols-2 items-center gap-8 relative">
-        <div class="pb-20 pt-30">
+      <div class="grid md:grid-cols-2 items-center gap-8 relative">
+        <div class="py-10 md:pb-20 md:pt-30">
           <h5 class="mb-5">Best Destinations around the world</h5>
           <h1 class="mb-6">Travel, <span>enjoy</span> and live a new and full life</h1>
           <p class="mt-4 mb-7 text-lg text-gray-600">Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
-          <div class="mt-6 flex gap-11 items-center">
+          <div class="mt-6 flex flex-col md:flex-row gap-11 items-center">
             <button class="button orange">Find out more</button>
             <button class="play-button">Play Demo</button>
           </div>
         </div>
-        <div>
+        <div class="flex justify-center hidden md:block ">
           <!-- <img src="assets/hero.png" alt="Hero Image"> -->
+          <img src="assets/hero.png" alt="Hero Image" class="md:absolute h-full w-7/12 top-0 right-0 object-contain pointer-events-none z-1">
         </div>
-        <img src="assets/hero.png" alt="Hero Image" class="absolute h-full w-7/12 scale-120 top-0 right-0 object-contain pointer-events-none z-1">
       </div>
   </section>
   <!-- Services -->
-  <section class="mb-40" data-aos="fade-left">
-    <div class="container" style="background-image: url(assets/decore-2.svg); background-repeat: no-repeat; background-size: 153px; background-position: 100% 0;">
-      <div class="mb-16">
+  <section class="mb-16 md:mb-40" data-aos="fade-left">
+    <div class="container bg-size-[100px] md:bg-size-[153px]" style="background-image: url(assets/decore-2.svg); background-repeat: no-repeat;background-position: 100% 0;">
+      <div class="mb-6 md:mb-16">
         <h6 class="uppercase font-semibold text-center">Our Services</h6>
         <h2 class="text-center">We Offer Best Services</h2>
       </div>
-      <div class="grid grid-cols-4 gap-10">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10">
         <div class="transition duration-600 shadow-black/10 hover:shadow-2xl bg-white rounded-4xl p-6 flex flex-col items-center text-center gap-4 cursor-pointer" data-aos="fade-up">
           <img class="size-20" src="/assets/calculated-weather.svg" alt="">
           <h6 class="text-xl font-medium text-brand-dark-gray">Calculated Weather </h6>
@@ -100,15 +100,15 @@
     </div>
   </section>
   <!-- Top Selling -->
-  <section class="mb-40" data-aos="fade-right">
+  <section class="mb-16 md:mb-40" data-aos="fade-right">
     <div class="container" style="background-image: url(assets/spiral.svg); background-repeat: no-repeat; background-size: 153px; background-position: center right 0;">
       <div class="mb-16">
         <h6 class="uppercase font-semibold text-center">Top Selling</h6>
         <h2 class="text-center">Top Destinations</h2>
       </div>
-      <div class="grid grid-cols-3 gap-10" data-aos="flip-up">
-        <div class="transition duration-600 shadow-black/10 shadow-2xl bg-white rounded-3xl overflow-hidden flex flex-col cursor-pointer"" data-aos=" flip-up" data-aos-delay="200">
-          <img class="w-full h-100 object-cover" src="/assets/rome.png" alt="">
+      <div class="grid md:grid-cols-3 gap-10" data-aos="flip-up">
+        <div class="w-80 mx-auto md:w-full md:mx-0 transition duration-600 shadow-black/10 shadow-2xl bg-white rounded-3xl overflow-hidden flex flex-col cursor-pointer"" data-aos=" flip-up" data-aos-delay="200">
+          <img class="w-full h-60 lg:h-100 object-cover" src="/assets/rome.png" alt="">
           <div class="py-7 px-5 flex flex-col gap-5">
             <div class="flex justify-between text-lg text-brand-light-blue font-medium">
               <div>Rome, Italty</div>
@@ -120,8 +120,8 @@
             </div>
           </div>
         </div>
-        <div class="transition duration-600 shadow-black/10 shadow-2xl bg-white rounded-3xl overflow-hidden flex flex-col cursor-pointer" data-aos="flip-up" data-aos-delay="50">
-          <img class="w-full h-100 object-cover" src="/assets/london.png" alt="">
+        <div class="w-80 mx-auto md:w-full md:mx-0 transition duration-600 shadow-black/10 shadow-2xl bg-white rounded-3xl overflow-hidden flex flex-col cursor-pointer" data-aos="flip-up" data-aos-delay="50">
+          <img class="w-full h-60 lg:h-100 object-cover" src="/assets/london.png" alt="">
           <div class="py-7 px-5 flex flex-col gap-5">
             <div class="flex justify-between text-lg text-brand-light-blue font-medium">
               <div>London, UK</div>
@@ -133,8 +133,8 @@
             </div>
           </div>
         </div>
-        <div class="transition duration-600 shadow-black/10 shadow-2xl bg-white rounded-3xl overflow-hidden flex flex-col cursor-pointer" data-aos="flip-up" data-aos-delay="100">
-          <img class="w-full h-100 object-cover" src="/assets/europe.png" alt="">
+        <div class="w-80 mx-auto md:w-full md:mx-0 transition duration-600 shadow-black/10 shadow-2xl bg-white rounded-3xl overflow-hidden flex flex-col cursor-pointer" data-aos="flip-up" data-aos-delay="100">
+          <img class="w-full h-60 lg:h-100 object-cover" src="/assets/europe.png" alt="">
           <div class="py-7 px-5 flex flex-col gap-5">
             <div class="flex justify-between text-lg text-brand-light-blue font-medium">
               <div>Full Europe</div>
@@ -150,9 +150,9 @@
     </div>
   </section>
   <!-- Trip -->
-  <section class="mb-40">
+  <section class="mb-16 md:mb-40">
     <div class="container">
-      <div class="grid grid-cols-2 gap-20">
+      <div class="grid md:grid-cols-2 gap-20">
         <div>
           <h6 class="font-medium mb-4">Easy and Fast</h6>
           <h2 class="leading-14 mb-7">Book your next trip in 3 easy steps</h2>
@@ -219,9 +219,9 @@
     </div>
   </section>
   <!-- Testimonials -->
-  <section class="mb-20">
+  <section class="mb-16 md:mb-40">
     <div class="container">
-      <div class="grid grid-cols-2 gap-20">
+      <div class="grid md:grid-cols-2 gap-20">
         <div>
           <h6 class="font-medium mb-4">Testimonials</h6>
           <h2 class="leading-14 mb-7">What people say about Us.</h2>
@@ -291,7 +291,7 @@
     </div>
   </section>
   <!-- Partners -->
-  <section class="mb-20 py-10">
+  <section class="mb-16 md:mb-40 py-10">
     <div class="container">
       <div class="splide partners-splide">
         <div class="splide__track py-10">
@@ -327,17 +327,17 @@
     </div>
   </section>
   <!-- Newsletter -->
-  <section data-aos="zoom-in">
+  <section data-aos="zoom-in" class="mb-4 md:mb-10">
     <div class="container relative">
       <span class="size-17 flex justify-center items-center bg-linear-to-b from-[#747DEF] to-[#5E3BE1] rounded-full absolute right-0 -top-6 z-1">
         <img src="assets/plane.svg" alt="Plance icon">
       </span>
-      <div class="bg-brand-light-purple/30 py-20 rounded-[20px] rounded-tl-[130px] relative overflow-hidden">
-        <img src="assets/lines.svg" class="absolute opacity-15 left-3 -bottom-10 rotate-90" alt="decor">
-        <img src="assets/lines.svg" class="absolute opacity-15 right-0 -top-10" alt="decor">
-        <h3 class="text-center max-w-225 mx-auto mb-18">Subscribe to get information, latest news and other interesting offers about Jadoo</h3>
-        <div class="newsletter">
-          <form action="">
+      <div class="bg-brand-light-purple/30 px-10 py-20 rounded-[20px] rounded-tl-[130px] relative overflow-hidden">
+        <img src="assets/lines.svg" class="absolute opacity-15 left-3 -bottom-10 rotate-90 pointer-events-none" alt="decor">
+        <img src="assets/lines.svg" class="absolute opacity-15 right-0 -top-10 pointer-events-none" alt="decor">
+        <h3 class="text-center max-w-225 mx-auto mb-18 relative">Subscribe to get information, latest news and other interesting offers about Jadoo</h3>
+        <div class="newsletter relative">
+          <form action="" class="flex flex-col md:flex-row">
             <input type="text" placeholder="Your email">
             <button>Subscribe</button>
           </form>
@@ -348,8 +348,8 @@
   <!-- Footer -->
   <footer>
     <div class="container pt-20">
-      <div class="grid grid-cols-12 gap-20">
-        <div class="col-span-3">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-10 md:gap-20">
+        <div class="col-span-2 md:col-span-3">
           <div class="mb-5">
             <a href="/"><img src="assets/logo-footer.svg" alt="Logo"></a>
           </div>
@@ -357,7 +357,7 @@
             <p>Book your trip in minute, get full Control for much longer. </p>
           </div>
         </div>
-        <div class="footer-links col-span-2">
+        <div class="footer-links lg:col-span-2">
           <h3>Company</h3>
           <ul>
             <li><a href="/">About</a></li>
@@ -365,7 +365,7 @@
             <li><a href="/">Mobile</a></li>
           </ul>
         </div>
-        <div class="footer-links col-span-2">
+        <div class="footer-links lg:col-span-2">
           <h3>Contact</h3>
           <ul>
             <li><a href="/">Help/FAQ</a></li>
@@ -373,7 +373,7 @@
             <li><a href="/">Affilates</a></li>
           </ul>
         </div>
-        <div class="footer-links col-span-2">
+        <div class="footer-links lg:col-span-2">
           <h3>More</h3>
           <ul>
             <li><a href="/">Airlinefees</a></li>
@@ -381,7 +381,7 @@
             <li><a href="/">Low fare tips</a></li>
           </ul>
         </div>
-        <div class="footer-social col-span-3">
+        <div class="footer-social col-span-2 md:col-span-3">
           <div class="mb-6.5">
             <ul>
               <li>

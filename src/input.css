@@ -44,6 +44,10 @@
     overflow-x: hidden;
   }
 
+  html {
+    @apply overflow-x-hidden;
+  }
+
   html.mobile-menu-open,
   html.mobile-menu-open body {
     @apply overflow-hidden h-full;
@@ -177,10 +181,13 @@
   }
   .newsletter input[type='text'] {
     @apply bg-white rounded-[10px] py-5.25 px-6.25 pl-15 w-full;
+    background-image: url(assets/mail.svg);
+    background-repeat: no-repeat;
+    background-position: left 15px center;
   }
   .newsletter button,
   .newsletter input[type='submit'] {
-    @apply bg-white rounded-[10px] py-5.5 px-12 shrink-0 max-w-45 flex justify-center items-center text-center text-white bg-linear-to-b from-[#FF946D] to-[#FF7D68];
+    @apply w-full md:w-auto md:max-w-45 bg-white rounded-[10px] py-5.5 px-12 shrink-0 flex justify-center items-center text-center text-white bg-linear-to-b from-[#FF946D] to-[#FF7D68];
   }
 
   /* Footer Links */
