@@ -41,6 +41,7 @@
   body {
     font-family: var(--font-sans);
     color: var(--color-brand-light-blue);
+    overflow-x: hidden;
   }
 
   html.mobile-menu-open,
@@ -62,10 +63,16 @@
       font-size: var(--text-6xl);
     }
     span {
+      @apply relative;
+    }
+    span::before {
+      content: '';
       background-image: url(/assets/line.svg);
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: 300px;
       background-position: 0 100%;
+      @apply inline-block absolute bottom-0 h-3 size-full w-0 transition-opacity duration-300 rounded-[10px] -z-1;
+      animation: underline 0.5s ease-in-out 1s normal forwards;
     }
   }
   h2,
@@ -199,5 +206,32 @@
   }
   .footer-social ul a span svg {
     @apply inline-flex size-4;
+  }
+
+  .play-button {
+    @apply flex items-center gap-5 relative pl-17.75 cursor-pointer leading-none h-12.75;
+  }
+  .play-button:after {
+    @apply size-12.75 bg-brand-orange rounded-full inline-flex justify-center items-center absolute left-0 top-0;
+    content: '';
+    background-image: url(assets/play.svg);
+    background-repeat: no-repeat;
+    background-position: center left 21px;
+  }
+  .play-button:before {
+    content: '';
+    @apply absolute inset-0 top-3 size-12.75 blur-lg bg-brand-orange opacity-20 transition-opacity duration-300 rounded-[10px] -z-1;
+  }
+}
+
+/* Animation */
+@keyframes underline {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
   }
 }

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+  AOS.init();
   function CustomClassExtension(Splide, Components, options) {
     function applyClasses(newIndex) {
       const slides = Components.Elements.slides;
@@ -63,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
       height: '400px',
       padding: '2rem',
       focus: 'center',
-      wheel: true,
       trimSpace: false,
       type: 'loop',
       perPage: 1,
@@ -98,4 +98,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // });
     testimonialSplide.mount({ CustomClassExtension });
   }
+
+
+
+
+
 });

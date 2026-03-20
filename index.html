@@ -10,8 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <script src="libs/alpine.js" defer></script>
   <script src="libs/splide.js"></script>
+  <script src="libs/aos.js"></script>
   <script src="main.js"></script>
   <link href="libs/splide.css" rel="stylesheet">
+  <link href="libs/aos.css" rel="stylesheet">
   <link href="./output.css" rel="stylesheet">
 </head>
 
@@ -51,12 +53,13 @@
     <!-- <img src="assets/decore.svg" alt="Hero Image" class="absolute h-full w-6/12 scale-120 top-0 right-0 object-contain pointer-events-none object-top-left"> -->
     <div class="container">
       <div class="grid grid-cols-2 items-center gap-8 relative">
-        <div class="py-20">
+        <div class="pb-20 pt-30">
           <h5 class="mb-5">Best Destinations around the world</h5>
           <h1 class="mb-6">Travel, <span>enjoy</span> and live a new and full life</h1>
           <p class="mt-4 mb-7 text-lg text-gray-600">Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
-          <div class="mt-6">
+          <div class="mt-6 flex gap-11 items-center">
             <button class="button orange">Find out more</button>
+            <button class="play-button">Play Demo</button>
           </div>
         </div>
         <div>
@@ -66,29 +69,29 @@
       </div>
   </section>
   <!-- Services -->
-  <section class="mb-40">
+  <section class="mb-40" data-aos="fade-left">
     <div class="container" style="background-image: url(assets/decore-2.svg); background-repeat: no-repeat; background-size: 153px; background-position: 100% 0;">
       <div class="mb-16">
         <h6 class="uppercase font-semibold text-center">Our Services</h6>
         <h2 class="text-center">We Offer Best Services</h2>
       </div>
       <div class="grid grid-cols-4 gap-10">
-        <div class="transition duration-600 shadow-black/10 hover:shadow-2xl bg-white rounded-4xl p-6 flex flex-col items-center text-center gap-4 cursor-pointer">
+        <div class="transition duration-600 shadow-black/10 hover:shadow-2xl bg-white rounded-4xl p-6 flex flex-col items-center text-center gap-4 cursor-pointer" data-aos="fade-up">
           <img class="size-20" src="/assets/calculated-weather.svg" alt="">
           <h6 class="text-xl font-medium text-brand-dark-gray">Calculated Weather </h6>
           <p>Built Wicket longer admire do barton vanity itself do in it.</p>
         </div>
-        <div class="transition duration-600 shadow-black/10 hover:shadow-2xl bg-white rounded-4xl p-6 flex flex-col items-center text-center gap-4 cursor-pointer">
+        <div class="transition duration-600 shadow-black/10 hover:shadow-2xl bg-white rounded-4xl p-6 flex flex-col items-center text-center gap-4 cursor-pointer" data-aos="fade-up" data-aos-delay="50">
           <img class="size-20" src="/assets/best-flights.svg" alt="">
           <h6 class="text-xl font-medium text-brand-dark-gray">Best Flights</h6>
           <p>Engrossed listening. Park gate sell they west hard for the.</p>
         </div>
-        <div class="transition duration-600 shadow-black/10 hover:shadow-2xl bg-white rounded-4xl p-6 flex flex-col items-center text-center gap-4 cursor-pointer">
+        <div class="transition duration-600 shadow-black/10 hover:shadow-2xl bg-white rounded-4xl p-6 flex flex-col items-center text-center gap-4 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
           <img class="size-20" src="/assets/local-events.svg" alt="">
           <h6 class="text-xl font-medium text-brand-dark-gray">Local Events</h6>
           <p>Barton vanity itself do in it. Preferd to men it engrossed listening.</p>
         </div>
-        <div class="transition duration-600 shadow-black/10 hover:shadow-2xl bg-white rounded-4xl p-6 flex flex-col items-center text-center gap-4 cursor-pointer">
+        <div class="transition duration-600 shadow-black/10 hover:shadow-2xl bg-white rounded-4xl p-6 flex flex-col items-center text-center gap-4 cursor-pointer" data-aos="fade-up" data-aos-delay="150">
           <img class="size-20" src="/assets/customization.svg" alt="">
           <h6 class="text-xl font-medium text-brand-dark-gray">Customization</h6>
           <p>We deliver outsourced aviation services for military customers</p>
@@ -97,27 +100,27 @@
     </div>
   </section>
   <!-- Top Selling -->
-  <section class="mb-40">
+  <section class="mb-40" data-aos="fade-right">
     <div class="container" style="background-image: url(assets/spiral.svg); background-repeat: no-repeat; background-size: 153px; background-position: center right 0;">
       <div class="mb-16">
         <h6 class="uppercase font-semibold text-center">Top Selling</h6>
         <h2 class="text-center">Top Destinations</h2>
       </div>
-      <div class="grid grid-cols-3 gap-10">
-        <div class="transition duration-600 shadow-black/10 shadow-2xl bg-white rounded-3xl overflow-hidden flex flex-col cursor-pointer">
+      <div class="grid grid-cols-3 gap-10" data-aos="flip-up">
+        <div class="transition duration-600 shadow-black/10 shadow-2xl bg-white rounded-3xl overflow-hidden flex flex-col cursor-pointer"" data-aos=" flip-up" data-aos-delay="200">
           <img class="w-full h-100 object-cover" src="/assets/rome.png" alt="">
           <div class="py-7 px-5 flex flex-col gap-5">
             <div class="flex justify-between text-lg text-brand-light-blue font-medium">
               <div>Rome, Italty</div>
               <div>$5,42k</div>
             </div>
-            <div class="flex items-center gap-2">
-              <img src="assets/navigation.svg" alt="">
+            <div class="flex items-center gap-2>
+              <img src=" assets/navigation.svg" alt="">
               <span class="font-medium">10 Days Trip</span>
             </div>
           </div>
         </div>
-        <div class="transition duration-600 shadow-black/10 shadow-2xl bg-white rounded-3xl overflow-hidden flex flex-col cursor-pointer">
+        <div class="transition duration-600 shadow-black/10 shadow-2xl bg-white rounded-3xl overflow-hidden flex flex-col cursor-pointer" data-aos="flip-up" data-aos-delay="50">
           <img class="w-full h-100 object-cover" src="/assets/london.png" alt="">
           <div class="py-7 px-5 flex flex-col gap-5">
             <div class="flex justify-between text-lg text-brand-light-blue font-medium">
@@ -130,7 +133,7 @@
             </div>
           </div>
         </div>
-        <div class="transition duration-600 shadow-black/10 shadow-2xl bg-white rounded-3xl overflow-hidden flex flex-col cursor-pointer">
+        <div class="transition duration-600 shadow-black/10 shadow-2xl bg-white rounded-3xl overflow-hidden flex flex-col cursor-pointer" data-aos="flip-up" data-aos-delay="100">
           <img class="w-full h-100 object-cover" src="/assets/europe.png" alt="">
           <div class="py-7 px-5 flex flex-col gap-5">
             <div class="flex justify-between text-lg text-brand-light-blue font-medium">
@@ -208,7 +211,7 @@
             </div>
           </div>
         </div>
-        <div class="relative flex justify-center items-center">
+        <div class="relative flex justify-center items-center" data-aos="flip-left">
           <div class="size-50 bg-[#59B1E6] blur-3xl absolute inset-0 m-auto"></div>
           <img src="assets/trip.png" alt="Trip" class="relative drop-shadow-2xl">
         </div>
@@ -229,7 +232,7 @@
           </div>
         </div>
         <div>
-          <div class="testimonials-slider splide">
+          <div class="testimonials-slider splide" data-aos="fade-left">
             <div class="splide__track">
               <div class="splide__list">
                 <div class="splide__slide p-12">
@@ -324,7 +327,7 @@
     </div>
   </section>
   <!-- Newsletter -->
-  <section>
+  <section data-aos="zoom-in">
     <div class="container relative">
       <span class="size-17 flex justify-center items-center bg-linear-to-b from-[#747DEF] to-[#5E3BE1] rounded-full absolute right-0 -top-6 z-1">
         <img src="assets/plane.svg" alt="Plance icon">
@@ -344,7 +347,7 @@
   </section>
   <!-- Footer -->
   <footer>
-    <div class="container py-20">
+    <div class="container pt-20">
       <div class="grid grid-cols-12 gap-20">
         <div class="col-span-3">
           <div class="mb-5">
@@ -422,6 +425,9 @@
             </a>
           </div>
         </div>
+      </div>
+      <div class="[&_p]:text-sm pt-20 pb-10 text-center">
+        <p>All rights reserved@jadoo.co</p>
       </div>
     </div>
   </footer>
