@@ -50,9 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
         1024: {
           perPage: 2,
         },
-        600: {
-          perPage: 1,
-        },
       },
     }).mount();
 
@@ -100,6 +97,17 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
+
+  // Mobile menu
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+  mobileMenuButton?.addEventListener('click', () => {
+    document.querySelector('html').classList.toggle('mobile-menu-open');
+  });
+  mobileMenuOverlay?.addEventListener('click', () => {
+    document.querySelector('html').classList.remove('mobile-menu-open');
+  });
 
 
 

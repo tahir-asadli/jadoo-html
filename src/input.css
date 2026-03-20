@@ -169,7 +169,13 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
-  .footer-social {
+  .hero-section {
+    @variant lg {
+      background-image: url(assets/hero-bg.svg);
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: contain;
+    }
   }
 
   /* Newsletter */

@@ -18,12 +18,12 @@
 </head>
 
 <body>
-  <header class="relative z-2">
+  <header class="lg:absolute top-0 left-0 mx-auto w-full">
     <div class="container flex items-center justify-between py-4">
       <div>
         <a href="/"><img src="assets/Logo.svg" alt="Logo"></a>
       </div>
-      <div class="hidden md:flex items-center gap-4 [&_a]:inline-flex [&_a]:py-2.5 [&_a]:px-5 [&_a]:text-brand-dark-gray [&_a]:transition-all [&_a]:hover:text-brand-orange">
+      <div class="hidden lg:flex items-center gap-4 [&_a]:inline-flex [&_a]:py-2.5 [&_a]:px-5 [&_a]:text-brand-dark-gray [&_a]:transition-all [&_a]:hover:text-brand-orange">
         <ul class="flex gap-2">
           <li><a href="/">Desitnations</a></li>
           <li><a href="/">Hotels</a></li>
@@ -46,14 +46,21 @@
           </div>
         </div>
       </div>
+      <div class="lg:hidden relative z-3 in-[.mobile-menu-open]:z-4">
+        <button class="size-10 flex flex-col gap-1.5 justify-center items-center cursor-pointer" id="mobile-menu-button">
+          <span class="h-0.5 w-7 bg-black transition-all relative origin-center in-[.mobile-menu-open]:rotate-45 in-[.mobile-menu-open]:top-1.75"></span>
+          <span class="h-0.5 w-7 bg-black in-[.mobile-menu-open]:hidden"></span>
+          <span class="h-0.5 w-7 bg-black transition-all relative origin-center in-[.mobile-menu-open]:-rotate-45 in-[.mobile-menu-open]:-top-0.25"></span>
+        </button>
+      </div>
     </div>
   </header>
   <!-- Hero -->
-  <section class="mb-16 md:mb-40">
+  <section class="mb-16 lg:mb-20 lg:pt-20 hero-section">
     <!-- <img src="assets/decore.svg" alt="Hero Image" class="absolute h-full w-6/12 scale-120 top-0 right-0 object-contain pointer-events-none object-top-left"> -->
     <div class="container">
-      <div class="grid md:grid-cols-2 items-center gap-8 relative">
-        <div class="py-10 md:pb-20 md:pt-30">
+      <div class="grid lg:grid-cols-2 items-center gap-8 relative">
+        <div class="py-10 lg:pb-20 lg:pt-30">
           <h5 class="mb-5">Best Destinations around the world</h5>
           <h1 class="mb-6">Travel, <span>enjoy</span> and live a new and full life</h1>
           <p class="mt-4 mb-7 text-lg text-gray-600">Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
@@ -62,14 +69,14 @@
             <button class="play-button">Play Demo</button>
           </div>
         </div>
-        <div class="flex justify-center hidden md:block ">
+        <div class="justify-center hidden lg:flex ">
           <!-- <img src="assets/hero.png" alt="Hero Image"> -->
-          <img src="assets/hero.png" alt="Hero Image" class="md:absolute h-full w-7/12 top-0 right-0 object-contain pointer-events-none z-1">
+          <img src="assets/hero.png" alt="Hero Image" class="lg:absolute h-full w-7/12 top-0 right-0 object-contain pointer-events-none z-1">
         </div>
       </div>
   </section>
   <!-- Services -->
-  <section class="mb-16 md:mb-40" data-aos="fade-left">
+  <section class="mb-16 md:mb-20" data-aos="fade-left">
     <div class="container bg-size-[100px] md:bg-size-[153px]" style="background-image: url(assets/decore-2.svg); background-repeat: no-repeat;background-position: 100% 0;">
       <div class="mb-6 md:mb-16">
         <h6 class="uppercase font-semibold text-center">Our Services</h6>
@@ -100,7 +107,7 @@
     </div>
   </section>
   <!-- Top Selling -->
-  <section class="mb-16 md:mb-40" data-aos="fade-right">
+  <section class="mb-16 md:mb-20" data-aos="fade-right">
     <div class="container" style="background-image: url(assets/spiral.svg); background-repeat: no-repeat; background-size: 153px; background-position: center right 0;">
       <div class="mb-16">
         <h6 class="uppercase font-semibold text-center">Top Selling</h6>
@@ -150,7 +157,7 @@
     </div>
   </section>
   <!-- Trip -->
-  <section class="mb-16 md:mb-40">
+  <section class="mb-16 md:mb-20">
     <div class="container">
       <div class="grid md:grid-cols-2 gap-20">
         <div>
@@ -219,9 +226,9 @@
     </div>
   </section>
   <!-- Testimonials -->
-  <section class="mb-16 md:mb-40">
+  <section class="mb-10">
     <div class="container">
-      <div class="grid md:grid-cols-2 gap-20">
+      <div class="grid lg:grid-cols-2 gap-20">
         <div>
           <h6 class="font-medium mb-4">Testimonials</h6>
           <h2 class="leading-14 mb-7">What people say about Us.</h2>
@@ -291,10 +298,10 @@
     </div>
   </section>
   <!-- Partners -->
-  <section class="mb-16 md:mb-40 py-10">
+  <section class="mb-10 lg:py-10">
     <div class="container">
       <div class="splide partners-splide">
-        <div class="splide__track py-10">
+        <div class="splide__track py-2 md:py-10">
           <ul class="splide__list">
             <li class="splide__slide [&_img]:transition-all bg-white [&_img]:duration-300 rounded-2xl [&_img]:grayscale-100 drop-shadow-xl drop-shadow-black/0 hover:drop-shadow-black/5 duration-300 [&:hover_img]:grayscale-0 flex justify-center">
               <a href="#">
@@ -431,6 +438,28 @@
       </div>
     </div>
   </footer>
+  <!-- Mobile menu -->
+  <section class="fixed top-0 items-center left-0 bottom-0 right-0 m-auto w-full max-w-75 h-0 overflow-hidden bg-black/10 rounded-xl transition-all opacity-60 in-[.mobile-menu-open]:flex in-[.mobile-menu-open]:opacity-100 in-[.mobile-menu-open]:h-[80vh] z-3 lg:hidden overflow-y-scroll scrollbar-hide">
+    <div class="container py-6 h-80vh [&_a]:text-brand-dark-blue [&_a]:hover:text-brand-orange [&_a]:text-center [&_a]:block">
+      <ul class="flex flex-col gap-4 mb-6">
+        <li><a href="/">Desitnations</a></li>
+        <li><a href="/">Hotels</a></li>
+        <li><a href="/">Flights</a></li>
+        <li><a href="/">Bookings</a></li>
+        <li><a href="/">Login</a></li>
+        <li><a href="/">Sign up</a></li>
+      </ul>
+      <div>
+        <div class="flex justify-center items-center gap-2 mb-6">
+          <a href="/">English</a><span class="text-5xl text-brand-orange leading-none">&middot;</span>
+          <a href="/">French</a><span class="text-5xl text-brand-orange leading-none">&middot;</span>
+          <a href="/">Spanish</a>
+        </div>
+      </div>
+      <p class="text-sm text-brand-dark-blue mb-4 text-center">Jadoo © 2000-2026, All Rights Reserved</p>
+    </div>
+  </section>
+  <section id="mobile-menu-overlay" class="fixed top-0 left-0 w-full h-0 in-[.mobile-menu-open]:h-full bg-white/90 z-1 lg:hidden backdrop-blur-sm "></section>
 </body>
 
 </html>
