@@ -7,7 +7,6 @@
     --font-serif: 'Volkhov', system-ui, -apple-system, 'Segoe UI', sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-black: #000;
@@ -24,9 +23,7 @@
     --text-xl: 20px;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 24px;
-    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 33px;
-    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 50px;
     --text-5xl: 64px;
     --text-5xl--line-height: 1;
@@ -271,9 +268,6 @@
   .z-3 {
     z-index: 3;
   }
-  .z-33 {
-    z-index: 33;
-  }
   .col-span-2 {
     grid-column: span 2 / span 2;
   }
@@ -439,17 +433,8 @@
   .max-w-225 {
     max-width: calc(var(--spacing) * 225);
   }
-  .max-w-\[80\%\] {
-    max-width: 80%;
-  }
-  .max-w-\[300px\] {
-    max-width: 300px;
-  }
   .flex-shrink {
     flex-shrink: 1;
-  }
-  .shrink-0 {
-    flex-shrink: 0;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -572,18 +557,6 @@
       background-color: color-mix(in oklab, var(--color-black) 10%, transparent);
     }
   }
-  .bg-black\/30 {
-    background-color: color-mix(in srgb, #000 30%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-black) 30%, transparent);
-    }
-  }
-  .bg-black\/90 {
-    background-color: color-mix(in srgb, #000 90%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-black) 90%, transparent);
-    }
-  }
   .bg-brand-dark-gray {
     background-color: var(--color-brand-dark-gray);
   }
@@ -668,6 +641,9 @@
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
   }
+  .px-12 {
+    padding-inline: calc(var(--spacing) * 12);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -692,28 +668,14 @@
   .pt-1 {
     padding-top: calc(var(--spacing) * 1);
   }
-  .pt-6 {
-    padding-top: calc(var(--spacing) * 6);
-  }
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
-  }
-  .pt-22 {
-    padding-top: calc(var(--spacing) * 22);
   }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
   }
   .text-center {
     text-align: center;
-  }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
   .text-5xl {
     font-size: var(--text-5xl);
@@ -756,15 +718,6 @@
   }
   .text-wrap {
     text-wrap: wrap;
-  }
-  .text-black {
-    color: var(--color-black);
-  }
-  .text-black\/60 {
-    color: color-mix(in srgb, #000 60%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--color-black) 60%, transparent);
-    }
   }
   .text-brand-dark-blue {
     color: var(--color-brand-dark-blue);
@@ -885,10 +838,6 @@
     --tw-duration: 300ms;
     transition-duration: 300ms;
   }
-  .duration-500 {
-    --tw-duration: 500ms;
-    transition-duration: 500ms;
-  }
   .duration-600 {
     --tw-duration: 600ms;
     transition-duration: 600ms;
@@ -900,11 +849,6 @@
   .hover\:bg-gray-100 {
     &:hover {
       background-color: var(--color-gray-100);
-    }
-  }
-  .hover\:text-amber-400 {
-    &:hover {
-      color: var(--color-amber-400);
     }
   }
   .hover\:shadow-2xl {
@@ -922,11 +866,6 @@
       --tw-drop-shadow: var(--tw-drop-shadow-size);
     }
   }
-  .in-\[\.has-announcement\]\:pt-30\.5 {
-    :where(*:is(.has-announcement)) & {
-      padding-top: calc(var(--spacing) * 30.5);
-    }
-  }
   .in-\[\.mobile-menu-open\]\:-top-0\.25 {
     :where(*:is(.mobile-menu-open)) & {
       top: calc(var(--spacing) * -0.25);
@@ -940,11 +879,6 @@
   .in-\[\.mobile-menu-open\]\:z-4 {
     :where(*:is(.mobile-menu-open)) & {
       z-index: 4;
-    }
-  }
-  .in-\[\.mobile-menu-open\]\:block {
-    :where(*:is(.mobile-menu-open)) & {
-      display: block;
     }
   }
   .in-\[\.mobile-menu-open\]\:flex {
@@ -962,19 +896,9 @@
       height: 80vh;
     }
   }
-  .in-\[\.mobile-menu-open\]\:h-\[100\%\] {
-    :where(*:is(.mobile-menu-open)) & {
-      height: 100%;
-    }
-  }
   .in-\[\.mobile-menu-open\]\:h-full {
     :where(*:is(.mobile-menu-open)) & {
       height: 100%;
-    }
-  }
-  .in-\[\.mobile-menu-open\]\:max-h-\[80vh\] {
-    :where(*:is(.mobile-menu-open)) & {
-      max-height: 80vh;
     }
   }
   .in-\[\.mobile-menu-open\]\:-rotate-45 {
@@ -990,11 +914,6 @@
   .in-\[\.mobile-menu-open\]\:opacity-100 {
     :where(*:is(.mobile-menu-open)) & {
       opacity: 100%;
-    }
-  }
-  .md\:absolute {
-    @media (width >= 48rem) {
-      position: absolute;
     }
   }
   .md\:col-span-3 {
@@ -1020,21 +939,6 @@
   .md\:mb-20 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 20);
-    }
-  }
-  .md\:mb-40 {
-    @media (width >= 48rem) {
-      margin-bottom: calc(var(--spacing) * 40);
-    }
-  }
-  .md\:block {
-    @media (width >= 48rem) {
-      display: block;
-    }
-  }
-  .md\:hidden {
-    @media (width >= 48rem) {
-      display: none;
     }
   }
   .md\:w-full {
@@ -1087,19 +991,9 @@
       grid-column: span 2 / span 2;
     }
   }
-  .lg\:mb-10 {
-    @media (width >= 64rem) {
-      margin-bottom: calc(var(--spacing) * 10);
-    }
-  }
   .lg\:mb-20 {
     @media (width >= 64rem) {
       margin-bottom: calc(var(--spacing) * 20);
-    }
-  }
-  .lg\:mb-40 {
-    @media (width >= 64rem) {
-      margin-bottom: calc(var(--spacing) * 40);
     }
   }
   .lg\:flex {
@@ -1152,11 +1046,6 @@
       padding-bottom: calc(var(--spacing) * 20);
     }
   }
-  .xl\:mb-40 {
-    @media (width >= 80rem) {
-      margin-bottom: calc(var(--spacing) * 40);
-    }
-  }
   .\[\&_a\]\:block {
     & a {
       display: block;
@@ -1190,11 +1079,6 @@
   .\[\&_a\]\:text-brand-dark-gray {
     & a {
       color: var(--color-brand-dark-gray);
-    }
-  }
-  .\[\&_a\]\:text-brand-orange {
-    & a {
-      color: var(--color-brand-orange);
     }
   }
   .\[\&_a\]\:transition-all {
@@ -1240,11 +1124,6 @@
     & p {
       font-size: var(--text-xs);
       line-height: var(--tw-leading, var(--text-xs--line-height));
-    }
-  }
-  .\[\&_p\]\:text-brand-dark-blue {
-    & p {
-      color: var(--color-brand-dark-blue);
     }
   }
   .\[\&\:hover_img\]\:grayscale-0 {
